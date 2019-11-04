@@ -1,0 +1,29 @@
+   <div class="example-container">
+    <h3>Product Categeries</h3>
+
+  <p>Please select Product Categeries to get personalized Dashboard</p>
+    <mat-form-field>
+      <mat-chip-list #chipList>
+      <mat-chip class="chip-background"
+      *ngFor="let tag of tags"
+      [removable]="removable"
+      (removed)="remove(tag)">
+       {{tag}}
+       <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+ </mat-chip>
+   <input #tagInput matInput  [matChipInputFor]="chipList">
+      </mat-chip-list>
+
+    </mat-form-field>
+    <mat-chip-list [selectable]="true" [multiple]="true">
+        <mat-chip *ngFor="let tag of alltags"   
+           color="accent" (click)="selected(tag)" selected>{{tag}}
+     </mat-chip>
+     </mat-chip-list>
+ </div>
+ <br>
+    <button  *ngIf="show()"  (click)="onSubmit()" mat-raised-button color="warn">Continue</button>
+
+    <div  *ngIf="showspinner" class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>

@@ -1,0 +1,31 @@
+
+<h2 style="text-align: center">Products</h2>
+
+<div class="product"  *ngFor="let product of products">
+                
+<mat-card class="example-card"> 
+       
+ <mat-card-header>
+        <mat-card-title>{{product?.title}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image class="img" src="http://localhost:3000/uploads/{{product.image}}"    alt="product">
+    <mat-card-content>
+        <h4>Description:</h4>
+        <p>
+        {{product.description}}
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+          {{product.price|currency:'INR':symbol}}
+
+    </mat-card-actions>
+    <mat-card-actions>
+<!-- <button  style="margin-right: 16px" class="btn btn-success" (click)="openRazorpayCheckout()">Pay with Razorpay</button> -->
+<button  style="margin-right: 16px" class="btn btn-success" (click)="onCart(product.productId)">Add to Cart</button>
+
+<button  style= "margin-right: 16px" class="btn btn-danger">View Details</button>
+    </mat-card-actions>
+        </mat-card>
+    
+</div>
+

@@ -1,0 +1,36 @@
+<h1 style="text-align: center">Welcome to USED THIGS</h1>
+
+
+
+<ngb-carousel
+(slide)="onSlide($event)"
+
+[showNavigationArrows]="true" 
+[showNavigationIndicators]="true"
+interval="10000"
+[keyboard]="true"
+[pauseOnHover]="true"
+[wrap]="true"
+[activeId]="'slideTwo'">
+    <ng-template ngbSlide>
+     <div class="picsum-img-wrapper">
+         <img src="../../../assets/image1.jpg" alt="Random first slide">
+     </div>
+     <div class="carousel-caption">
+         <h3>fIEST SLIDE LABEL</h3>
+         <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+
+     </div>
+    </ng-template>
+
+    <ng-template ngbSlide>
+        <div class="picsum-img-wrapper" id="slideTwo">
+            <img src="../../../assets/image2.jpg" alt="Random first slide">
+        </div>
+        <div class="carousel-caption">
+            <h3>fIEST SLIDE LABEL</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+   
+        </div>
+       </ng-template>
+</ngb-carousel>

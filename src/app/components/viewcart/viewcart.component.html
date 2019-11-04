@@ -1,0 +1,53 @@
+<h4>Your Cart</h4>
+
+<!-- <mat-card>
+    <div class="container">
+    <div class="row" *ngFor="let ele of Cart">
+                    <div class="col-md-4">
+     <img  class="img" src="http://localhost:3000/uploads/{{ele.image}}"    alt="product">
+                 </div>
+                <div class="col-md-8">
+                 <strong>{{ele.title}}</strong>
+                </div>
+    </div>
+    </div>
+
+      <div class="col-md-6"> 
+         Quantity:
+         <span><label>Qty:<span></span></label><select>
+             <option>{{ele.qty}}</option>
+         </select></span>
+
+         <br>
+         <br>
+         <strong>Total Price:{{total}}</strong>
+        </div> -->
+        
+       
+<!-- </mat-card>  -->
+
+  
+
+
+  <!-- <h3>Shopping Cart</h3>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6">
+              <p>First Element</p>
+          </div>
+          <div class="col-md-6">
+              <p>Side element</p>
+          </div>
+      </div>
+  </div> -->
+
+
+<div class="container">
+    <div class="row">
+        <div class="clearfix" *ngFor="let ele of Cart">
+            <img  src="http://localhost:3000/uploads/{{ele.image}}" alt="product" class="pull-left mr-5">
+             <p>{{ele.title}}</p>
+             <p>{{ele.description}}</p>
+        </div>
+    </div>
+</div>
